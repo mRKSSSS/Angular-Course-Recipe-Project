@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12">
+        <!-- <button class="btn btn-success" [routerLink]="['new']">New Recipe</button> -->
+        <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+    </div>
+</div>
+<hr>
+<!-- <div class="row">
+    <div class="col-12">
+        <a href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">Recipe Name</h4>
+                <p class="list-group-item-text">Description</p>
+            </div>
+            <span class="pull-right">
+                <img src="" alt="" class="img-responsive" style="max-height: 50px;">
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-istem>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-12">
+        <!-- <app-recipe-item 
+            *ngFor="let recipeEle of recipes" 
+            [recipe]="recipeEle"
+            (recipeClicked)="recipeClicked2(recipeEle)"
+        ></app-recipe-item> -->
+        <app-recipe-item 
+            *ngFor="let recipeEle of recipes; let i = index" 
+            [recipe]="recipeEle"
+            [index]="i"
+        ></app-recipe-item>
+    </div>
+</div>

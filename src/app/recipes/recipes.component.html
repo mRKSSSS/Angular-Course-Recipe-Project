@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-5">
+    <!-- <app-recipe-list (onRecipeClicked)="recipeClicked3($event)"></app-recipe-list> -->
+    <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-md-7">
+    <!-- <app-recipe-detail *ngIf="recipeClicked; else template" [recipe]="recipeClicked"></app-recipe-detail> -->
+    <!-- <ng-template #template>
+      <p>Please select a Recipe.</p>
+    </ng-template> -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
